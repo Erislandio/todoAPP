@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Menu extends Component {
     render() {
         return (
-            <React.Fragment>
+            <div>
                 <nav className="navbar navbar-inverse bg-inverse">
                     <div className="container">
                         <div className="navbar-header">
@@ -12,7 +12,7 @@ export default class Menu extends Component {
                                 TodoApp
                             </a>
                         </div>
-                        <div id="navbar" className="navbar-collpase collapse">
+                        <div id="navbar" className="navbar-collapse collapse">
                             <ul className="nav navbar-nav">
                                 <li>
                                     <a href="#/todos">
@@ -23,12 +23,12 @@ export default class Menu extends Component {
                                     <a href="#/about">
                                         Sobre
                                     </a>
-                                </li> 
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-            </React.Fragment>
+            </div>
         )
     }
 }

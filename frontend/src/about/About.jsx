@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import PageHeader from '../template/PageHeader'
 
 export default class About extends Component {
   render() {
     return (
       <div>
-          <h1>Sobre</h1>
+          <PageHeader name="Sobre" small="nós"/>
       </div>
     )
   }
