@@ -7,7 +7,7 @@ export default props => {
         return (
             <button
                 className={`btn btn-` + props.style}
-                onClick={props.click}>
+                onClick={props.onClick}>
                 <i className={`fa fa-` + props.icon}></i>
             </button>
 
