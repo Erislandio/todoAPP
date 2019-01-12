@@ -16,11 +16,14 @@ export default props => {
                     <IconButton
                         style="success"
                         icon="check"
+                        hide={todo.done}
                         onClick={() => props.handleMarkAsDone(todo)}>
+                        
                     </IconButton>
                     <IconButton
                         style="warning"
                         icon="undo"
+                        hide={!todo.done}
                         onClick={() => props.handleMarkAsPending(todo)}
                     ></IconButton>
                     <IconButton
@@ -40,7 +43,7 @@ export default props => {
                     <th>
                         Descrição
                     </th>
-                    <th>
+                    <th className="tableActions">
                         Ações
                     </th>
                 </tr>
