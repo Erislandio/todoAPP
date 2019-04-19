@@ -1,7 +1,8 @@
 import React from 'react'
 import IconButton from '../template/IconButton';
+import { connect } from 'react-redux'
 
-export default props => {
+const TodoList = props => {
 
     const renderRows = () => {
         const list = props.list || []
@@ -18,14 +19,15 @@ export default props => {
                         icon="check"
                         hide={todo.done}
                         onClick={() => props.handleMarkAsDone(todo)}>
-                        
+
                     </IconButton>
                     <IconButton
                         style="warning"
                         icon="undo"
                         hide={!todo.done}
                         onClick={() => props.handleMarkAsPending(todo)}
-                    ></IconButton>
+                    >
+                    </IconButton>
                     <IconButton
                         style="danger"
                         icon="trash-o"
@@ -54,3 +56,10 @@ export default props => {
         </table>
     )
 }
+
+// * metodo para mapear o estado do reducers
+
+const mapStateToProps = state => ({ list: state.todo.list })
+
+export default connect(mapStateToProps)(TodoList)
+

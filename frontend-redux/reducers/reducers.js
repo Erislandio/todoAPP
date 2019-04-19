@@ -17,7 +17,7 @@ const rootReducers = combineReducers({
         done: false
       },
       {
-        _id: 2,
+        _id: 3,
         description: "Arrumar guarda roupas",
         done: false
       }
